@@ -204,20 +204,6 @@ export default function CertificateView({ certificateId }: { certificateId: stri
                   <Award size={120} className="text-slate-200" />
                 )}
               </div>
-              {/* Floating Certificate Thumbnail */}
-              <div className="absolute -bottom-4 -right-4 w-28 h-20 bg-white rounded-lg shadow-xl border border-slate-100 overflow-hidden hidden md:block group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-500 z-10">
-                {hasDesign && (
-                  <div className="opacity-0 pointer-events-none absolute" style={{ width: designConfig.canvas.width, height: designConfig.canvas.height }}>
-                    <CertificateRenderer
-                      ref={stageRef}
-                      canvas={designConfig.canvas}
-                      elements={designConfig.elements}
-                      placeholderData={placeholderData}
-                      maxWidth={designConfig.canvas.width}
-                      borderless
-                    />
-                  </div>
-                )}
                 {hasDesign && (
                   <div className="w-full h-full p-1">
                     <CertificateRenderer
@@ -229,7 +215,6 @@ export default function CertificateView({ certificateId }: { certificateId: stri
                     />
                   </div>
                 )}
-              </div>
             </div>
 
             {/* Core Identity Info */}
@@ -456,23 +441,6 @@ export default function CertificateView({ certificateId }: { certificateId: stri
       {/* Social Share Modal */}
       {showShareModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-300">
-          <div className="bg-white rounded-[2.5rem] w-full max-w-lg overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300">
-            <div className="p-8 border-b border-slate-100 flex items-center justify-between">
-              <div>
-                <h3 className="text-xl font-black text-slate-800 uppercase tracking-tight">Share Credential</h3>
-                <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">Broadcast your achievement</p>
-              </div>
-              <button
-                onClick={() => setShowShareModal(false)}
-                className="p-3 hover:bg-slate-50 rounded-2xl transition-all"
-              >
-                <X size={20} className="text-slate-400" />
-              </button>
-            </div>
-
-            <div className="p-8">
-              <div className="grid grid-cols-3 gap-6">
-                <a href={shareLinks.linkedin} target="_blank" className="flex flex-col items-center gap-3 group">
                   <div className="w-14 h-14 bg-[#0077b5] rounded-2xl flex items-center justify-center text-white shadow-lg shadow-[#0077b5]/20 group-hover:scale-110 transition-all">
                     <Linkedin size={24} />
                   </div>
@@ -529,10 +497,11 @@ export default function CertificateView({ certificateId }: { certificateId: stri
                   </button>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
+            </div >
+          </div >
+        </div >
+      )
+}
+    </div >
   );
 }
