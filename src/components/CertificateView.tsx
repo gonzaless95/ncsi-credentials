@@ -204,17 +204,18 @@ export default function CertificateView({ certificateId }: { certificateId: stri
                   <Award size={120} className="text-slate-200" />
                 )}
               </div>
-                {hasDesign && (
-                  <div className="w-full h-full p-1">
-                    <CertificateRenderer
-                      canvas={designConfig.canvas}
-                      elements={designConfig.elements}
-                      placeholderData={placeholderData}
-                      maxWidth={90}
-                      borderless
-                    />
-                  </div>
-                )}
+              {hasDesign && (
+                <div className="w-full h-full p-1 opacity-0 pointer-events-none absolute left-[-9999px]">
+                  <CertificateRenderer
+                    ref={stageRef}
+                    canvas={designConfig.canvas}
+                    elements={designConfig.elements}
+                    placeholderData={placeholderData}
+                    maxWidth={designConfig.canvas.width}
+                    borderless
+                  />
+                </div>
+              )}
             </div>
 
             {/* Core Identity Info */}
@@ -388,7 +389,13 @@ export default function CertificateView({ certificateId }: { certificateId: stri
                   <code className="text-[9px] font-mono text-slate-400 break-all p-3 bg-slate-50 rounded-xl block border border-slate-100">
                     {certificate.certificate_id}
                   </code>
-                  <button className="w-full mt-3 py-3 rounded-xl border border-dashed border-slate-200 text-[10px] font-black text-slate-400 uppercase tracking-widest hover:border-blue-400 hover:text-blue-600 transition-all flex items-center justify-center group">
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText(`https://credentials.ncsi.institute/verify/${certificate.certificate_id}`);
+                      alert('Link copied!');
+                    }}
+                    className="w-full mt-3 py-3 rounded-xl border border-dashed border-slate-200 text-[10px] font-black text-slate-400 uppercase tracking-widest hover:border-blue-400 hover:text-blue-600 transition-all flex items-center justify-center group"
+                  >
                     <Download size={12} className="mr-2 group-hover:scale-110 transition-transform" /> Copy ID Link
                   </button>
                 </div>
@@ -441,6 +448,23 @@ export default function CertificateView({ certificateId }: { certificateId: stri
       {/* Social Share Modal */}
       {showShareModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-300">
+          <div className="bg-white rounded-[2.5rem] w-full max-w-lg overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300">
+            <div className="p-8 border-b border-slate-100 flex items-center justify-between">
+              <div>
+                <h3 className="text-xl font-black text-slate-800 uppercase tracking-tight">Share Credential</h3>
+                <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">Broadcast your achievement</p>
+              </div>
+              <button
+                onClick={() => setShowShareModal(false)}
+                className="p-3 hover:bg-slate-50 rounded-2xl transition-all"
+              >
+                <X size={20} className="text-slate-400" />
+              </button>
+            </div>
+
+            <div className="p-8">
+              <div className="grid grid-cols-3 gap-6">
+                <a href={shareLinks.linkedin} target="_blank" className="flex flex-col items-center gap-3 group">
                   <div className="w-14 h-14 bg-[#0077b5] rounded-2xl flex items-center justify-center text-white shadow-lg shadow-[#0077b5]/20 group-hover:scale-110 transition-all">
                     <Linkedin size={24} />
                   </div>
@@ -483,12 +507,12 @@ export default function CertificateView({ certificateId }: { certificateId: stri
                 <div className="flex gap-2">
                   <input
                     readOnly
-                    value={window.location.href}
+                    value={`https://credentials.ncsi.institute/verify/${certificate.certificate_id}`}
                     className="flex-1 bg-slate-50 border border-slate-100 rounded-xl px-4 py-3 text-[10px] font-mono text-slate-500 focus:outline-none"
                   />
                   <button
                     onClick={() => {
-                      navigator.clipboard.writeText(window.location.href);
+                      navigator.clipboard.writeText(`https://credentials.ncsi.institute/verify/${certificate.certificate_id}`);
                       alert('Copied!');
                     }}
                     className="p-3 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition-all"
@@ -497,11 +521,10 @@ export default function CertificateView({ certificateId }: { certificateId: stri
                   </button>
                 </div>
               </div>
-            </div >
-          </div >
-        </div >
-      )
-}
-    </div >
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
