@@ -1,0 +1,24 @@
+﻿
+> vite-react-typescript-starter@0.0.0 typecheck
+> tsc --noEmit -p tsconfig.app.json
+
+src/components/Dashboard.tsx(2,24): error TS6133: 'FileText' is declared but its value is never read.
+src/components/Designer/BottomBar.tsx(2,10): error TS6133: 'ZoomIn' is declared but its value is never read.
+src/components/Designer/BottomBar.tsx(2,18): error TS6133: 'ZoomOut' is declared but its value is never read.
+src/components/Designer/components/LeftSidebar.tsx(5,21): error TS6133: 'Shapes' is declared but its value is never read.
+src/components/Designer/components/RightSidebar.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/Designer/components/RightSidebar.tsx(38,43): error TS2339: Property 'background' does not exist on type 'CanvasConfig'.
+src/components/Designer/components/RightSidebar.tsx(39,64): error TS2353: Object literal may only specify known properties, and 'background' does not exist in type 'Partial<CanvasConfig>'.
+src/components/Designer/components/RightSidebar.tsx(125,33): error TS2322: Type 'string | GradientColor' is not assignable to type 'string | number | readonly string[] | undefined'.
+  Type 'GradientColor' is not assignable to type 'string | number | readonly string[] | undefined'.
+src/components/Designer/components/RightSidebar.tsx(139,33): error TS2322: Type 'string | GradientColor' is not assignable to type 'string | number | readonly string[] | undefined'.
+  Type 'GradientColor' is not assignable to type 'string | number | readonly string[] | undefined'.
+src/components/Designer/components/TransformerLayer.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/Designer/ErrorBoundary.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/Designer/FloatingToolbar.tsx(5,40): error TS6133: 'Type' is declared but its value is never read.
+src/components/Designer/LayersPanel.tsx(12,75): error TS6133: 'onClose' is declared but its value is never read.
+src/components/Designer/PropertiesPanel.tsx(2,93): error TS6133: 'Move' is declared but its value is never read.
+src/components/Designer/Sidebar.tsx(2,49): error TS6133: 'Grid' is declared but its value is never read.
+src/components/Designer/SidePanel.tsx(2,13): error TS6133: 'Type' is declared but its value is never read.
+src/components/Designer/SidePanel.tsx(2,28): error TS6133: 'ImageIcon' is declared but its value is never read.
+src/components/Designer/SidePanel.tsx(2,39): error TS6133: 'Box' is declared but its value is never read.

@@ -1,0 +1,184 @@
+﻿
+> vite-react-typescript-starter@0.0.0 lint
+> eslint .
+
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Auth.tsx
+  26:14  error  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\CertificateView.tsx
+  33:6  warning  React Hook useEffect has a missing dependency: 'loadCertificate'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Certificates.tsx
+  49:6  warning  React Hook useEffect has a missing dependency: 'loadData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Dashboard.tsx
+   2:24  error    'FileText' is defined but never used                                                                          @typescript-eslint/no-unused-vars
+  26:6   warning  React Hook useEffect has a missing dependency: 'loadStats'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\BottomBar.tsx
+  2:10  error  'ZoomIn' is defined but never used   @typescript-eslint/no-unused-vars
+  2:18  error  'ZoomOut' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\Canvas.tsx
+  68:8  warning  React Hook useEffect has a missing dependency: 'onCanvasReady'. Either include it or remove the dependency array. If 'onCanvasReady' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\FloatingToolbar.tsx
+    5:40  error  'Type' is defined but never used          @typescript-eslint/no-unused-vars
+   11:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   47:55  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   57:85  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   64:55  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   69:85  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   80:51  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   90:86  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   91:94  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   97:85  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   98:94  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  104:86  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  105:94  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  119:98  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\LayersPanel.tsx
+  12:75  error  'onClose' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\PropertiesPanel.tsx
+    2:93   error  'Move' is defined but never used          @typescript-eslint/no-unused-vars
+    7:24   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  107:63   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  124:67   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  134:71   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  138:105  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  145:94   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  146:140  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  151:93   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  152:140  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  157:94   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  158:140  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  169:144  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\SidePanel.tsx
+  2:13  error  'Type' is defined but never used          @typescript-eslint/no-unused-vars
+  2:28  error  'ImageIcon' is defined but never used     @typescript-eslint/no-unused-vars
+  2:39  error  'Box' is defined but never used           @typescript-eslint/no-unused-vars
+  7:22  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\Sidebar.tsx
+  2:49  error  'Grid' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\components\CanvasArea.tsx
+  94:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\components\Inspector.tsx
+   10:94   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   66:83   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  101:78   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  227:66   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  333:64   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  342:68   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  359:68   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  367:68   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  388:62   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  397:62   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  429:125  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  429:182  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  430:171  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  445:171  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  451:61   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  456:70   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  456:97   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  462:102  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  464:128  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  476:76   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  477:133  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  486:79   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  486:124  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  491:66   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  491:106  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  491:151  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  539:64   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  549:64   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  565:64   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  574:64   error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\components\LeftRail.tsx
+  40:64  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\components\LeftSidebar.tsx
+  5:21  error  'Shapes' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\components\ToolPanel.tsx
+   93:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  111:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  136:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  183:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  274:63  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  405:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\components\TransformerLayer.tsx
+   7:26  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  21:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\components\elements\ImageElement.tsx
+   45:22  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   49:20  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   53:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   64:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  121:26  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  125:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\components\elements\ShapeElement.tsx
+  13:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  24:70  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  43:22  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  47:20  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  51:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  62:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\components\elements\TextElement.tsx
+  15:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  26:70  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\index.tsx
+   9:21  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+  10:22  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+  24:8   warning  React Hook useEffect has a missing dependency: 'setDesignType'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  30:8   warning  React Hook useEffect has a missing dependency: 'loadTemplate'. Either include it or remove the dependency array   react-hooks/exhaustive-deps
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\store\useDesignerStore.ts
+   98:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  116:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  117:24  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  118:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  142:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  623:31  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Designer\types.ts
+  243:15  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\OrganizationSetup.tsx
+  22:14  error  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Recipients.tsx
+  30:6  warning  React Hook useEffect has a missing dependency: 'loadRecipients'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\components\Templates.tsx
+   17:18  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+   42:28  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+   50:6   warning  React Hook useEffect has a missing dependency: 'loadTemplates'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  119:43  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\contexts\AuthContext.tsx
+  73:17  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\contexts\OrganizationContext.tsx
+   53:8   warning  React Hook useEffect has a missing dependency: 'loadOrganization'. Either include it or remove the dependency array             react-hooks/exhaustive-deps
+  111:17  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\CT\Downloads\project-bolt-sb1-wxwtixc7\project\src\lib\supabase.ts
+  49:26  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  60:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  71:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Γ£û 119 problems (108 errors, 11 warnings)
+
