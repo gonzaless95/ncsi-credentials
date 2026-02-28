@@ -141,7 +141,7 @@ export default function CertificateView({ certificateId }: { certificateId: stri
   };
 
   const shareLinks = {
-    linkedin: `https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=${encodeURIComponent(certificate.title)}&organizationName=${encodeURIComponent(certificate.organization?.name || 'NCSI Institute')}&issueYear=${new Date(certificate.issued_date).getFullYear()}&issueMonth=${new Date(certificate.issued_date).getMonth() + 1}&certId=${encodeURIComponent(certificate.certificate_id)}&certUrl=${encodeURIComponent(`https://credentials.ncsi.institute/verify/${certificate.certificate_id}`)}`,
+    linkedin: `https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=${encodeURIComponent(certificate.title)}&organizationName=${encodeURIComponent('National Cyber Security Institute')}&issueYear=${new Date(certificate.issued_date).getFullYear()}&issueMonth=${new Date(certificate.issued_date).getMonth() + 1}&certId=${encodeURIComponent(certificate.certificate_id)}&certUrl=${encodeURIComponent(`https://credentials.ncsi.institute/verify/${certificate.certificate_id}`)}`,
     twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(`https://credentials.ncsi.institute/verify/${certificate.certificate_id}`)}&text=${encodeURIComponent(`I just earned a verified credential: ${certificate.title}!`)}`,
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://credentials.ncsi.institute/verify/${certificate.certificate_id}`)}`,
     whatsapp: `https://wa.me/?text=${encodeURIComponent(`Check out my verified credential: https://credentials.ncsi.institute/verify/${certificate.certificate_id}`)}`,
