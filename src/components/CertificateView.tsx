@@ -58,6 +58,9 @@ export default function CertificateView({ certificateId }: { certificateId: stri
       const cert = data as unknown as Certificate;
       setCertificate(cert);
 
+      // Dynamic Page Title for SEO/Sharing
+      document.title = `${cert.recipient_name} | ${cert.title} - NCSI Verified`;
+
       // Load fonts used in the template
       if (cert.template?.design_config?.elements) {
         const fonts = new Set<string>();
