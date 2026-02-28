@@ -86,12 +86,11 @@ export const CertificateRenderer = forwardRef<any, CertificateRendererProps>(({ 
         .map(el => {
             let updatedEl = { ...el };
 
-            // Handle text content replacement
-            if (updatedEl.type === 'text') {
-                let content = updatedEl.content || '';
+            // Handle text/content placeholder replacement
+            if ('content' in updatedEl && typeof updatedEl.content === 'string') {
+                let content = updatedEl.content;
                 if (placeholderData) {
                     Object.entries(placeholderData).forEach(([key, value]) => {
-                        // Support both {{field_id}} and generic {{recipient_name}} style placeholders
                         content = content.replace(new RegExp(`{{${key}}}`, 'g'), String(value));
                     });
                 }

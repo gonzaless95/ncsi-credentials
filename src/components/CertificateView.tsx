@@ -133,7 +133,7 @@ export default function CertificateView({ certificateId }: { certificateId: stri
     f2: formattedDate,
     f3: certificate.certificate_id,
     f4: certificate.title,
-    VerifyLink: window.location.href,
+    VerifyLink: `https://credentials.ncsi.institute/verify/${certificate.certificate_id}`,
   };
 
   const handleShare = () => {
@@ -141,12 +141,12 @@ export default function CertificateView({ certificateId }: { certificateId: stri
   };
 
   const shareLinks = {
-    linkedin: `https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=${encodeURIComponent(certificate.title)}&organizationName=${encodeURIComponent(certificate.organization?.name || 'NCSI Institute')}&issueYear=${new Date(certificate.issued_date).getFullYear()}&issueMonth=${new Date(certificate.issued_date).getMonth() + 1}&certId=${encodeURIComponent(certificate.certificate_id)}&certUrl=${encodeURIComponent(window.location.href)}`,
-    twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(`I just earned a verified credential: ${certificate.title}!`)}`,
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`,
-    whatsapp: `https://wa.me/?text=${encodeURIComponent(`Check out my verified credential: ${window.location.href}`)}`,
-    email: `mailto:?subject=${encodeURIComponent(`Verified Credential: ${certificate.title}`)}&body=${encodeURIComponent(`Check out my verified credential: ${window.location.href}`)}`,
-    slack: `https://slack.com/share?text=${encodeURIComponent(window.location.href)}`
+    linkedin: `https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=${encodeURIComponent(certificate.title)}&organizationName=${encodeURIComponent(certificate.organization?.name || 'NCSI Institute')}&issueYear=${new Date(certificate.issued_date).getFullYear()}&issueMonth=${new Date(certificate.issued_date).getMonth() + 1}&certId=${encodeURIComponent(certificate.certificate_id)}&certUrl=${encodeURIComponent(`https://credentials.ncsi.institute/verify/${certificate.certificate_id}`)}`,
+    twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(`https://credentials.ncsi.institute/verify/${certificate.certificate_id}`)}&text=${encodeURIComponent(`I just earned a verified credential: ${certificate.title}!`)}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://credentials.ncsi.institute/verify/${certificate.certificate_id}`)}`,
+    whatsapp: `https://wa.me/?text=${encodeURIComponent(`Check out my verified credential: https://credentials.ncsi.institute/verify/${certificate.certificate_id}`)}`,
+    email: `mailto:?subject=${encodeURIComponent(`Verified Credential: ${certificate.title}`)}&body=${encodeURIComponent(`Check out my verified credential: https://credentials.ncsi.institute/verify/${certificate.certificate_id}`)}`,
+    slack: `https://slack.com/share?text=${encodeURIComponent(`https://credentials.ncsi.institute/verify/${certificate.certificate_id}`)}`
   };
 
   const handleDownload = async () => {
