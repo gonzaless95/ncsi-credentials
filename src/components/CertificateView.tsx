@@ -158,11 +158,21 @@ export default function CertificateView({ certificateId }: { certificateId: stri
       const { width, height } = designConfig.canvas;
       const orientation = width > height ? 'l' : 'p';
 
-      const pdfWidth = width * 0.75;
-      const pdfHeight = height * 0.75;
+      // Use A4 format for standard printing/viewing
+      const pdf = new jsPDF(orientation, 'pt', 'a4');
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = pdf.internal.pageSize.getHeight();
 
-      const pdf = new jsPDF(orientation, 'pt', [pdfWidth, pdfHeight]);
-      pdf.addImage(certDataUrl, 'PNG', 0, 0, pdfWidth, pdfHeight);
+      // Calculate scaling to fit the page while maintaining aspect ratio
+      const ratio = Math.min(pageWidth / width, pageHeight / height);
+      const imgWidth = width * ratio;
+      const imgHeight = height * ratio;
+
+      // Center the image on the page
+      const x = (pageWidth - imgWidth) / 2;
+      const y = (pageHeight - imgHeight) / 2;
+
+      pdf.addImage(certDataUrl, 'PNG', x, y, imgWidth, imgHeight);
       pdf.save(`${certificate.title.replace(/\s+/g, '_')}_Certificate.pdf`);
 
       alert('Certificate downloaded successfully in PDF format.');
